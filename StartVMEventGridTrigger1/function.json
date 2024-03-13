@@ -1,0 +1,9 @@
+{
+    "bindings": [
+      {
+        "name": "eventGridEvent",
+        "direction": "in",
+        "type": "eventGridTrigger"
+      }
+    ]
+  }
