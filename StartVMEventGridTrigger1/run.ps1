@@ -8,11 +8,11 @@ param($eventGridEvent, $TriggerMetadata)
 # Retrieve the User-Assigned Managed Identity Client ID from environment variable
 $userAssignedClientId = $env:USER_ASSIGNED_IDENTITY_CLIENT_ID
 
-# Part Microsoft
-# From here on the Code is provided by Microsoft https://learn.microsoft.com/en-us/azure/update-manager/tutorial-using-functions?tabs=portal%2Cscript-vm-on
 # Connect to Azure with the User-Assigned Managed Identity
 Connect-AzAccount -Identity -AccountId $userAssignedClientId
 
+# Part Microsoft
+# From here on the Code is provided by Microsoft https://learn.microsoft.com/en-us/azure/update-manager/tutorial-using-functions?tabs=portal%2Cscript-vm-on
 # Install the Resource Graph module from PowerShell Gallery
 # Install-Module -Name Az.ResourceGraph
 
