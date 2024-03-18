@@ -12,7 +12,7 @@
 # Authenticate with Azure PowerShell using MSI.
 # Remove this if you are not planning on using MSI or Azure PowerShell.
 
-# Modified with the user-defined-managed-identity
+# Modified with the user-defined-managed-identity Part Baggenstos
 if ($env:MSI_SECRET -and $env:USER_ASSIGNED_IDENTITY_CLIENT_ID) {
     Disable-AzContextAutosave -Scope Process | Out-Null
     $userAssignedClientId = $env:USER_ASSIGNED_IDENTITY_CLIENT_ID
