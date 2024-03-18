@@ -1,15 +1,19 @@
 # Make sure that we are using eventGridEvent for parameter binding in Azure function.
 param($eventGridEvent, $TriggerMetadata)
 
+# Part EventGrid Template
 # Make sure to pass hashtables to Out-String so they're logged correctly
 $eventGridEvent | Out-String | Write-Host
 
+# Part Baggenstos
 # Retrieve the User-Assigned Managed Identity Client ID from environment variable
 $userAssignedClientId = $env:USER_ASSIGNED_IDENTITY_CLIENT_ID
 
 # Connect to Azure with the User-Assigned Managed Identity
 Connect-AzAccount -Identity -AccountId $userAssignedClientId
 
+# Part Microsoft
+# From here on the code is provided by Microsoft https://learn.microsoft.com/en-us/azure/update-manager/tutorial-using-functions?tabs=portal%2Cscript-vm-off
 # Install the Resource Graph module from PowerShell Gallery
 # Install-Module -Name Az.ResourceGraph
 
